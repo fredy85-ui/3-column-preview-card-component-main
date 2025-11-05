@@ -1,0 +1,113 @@
+:root {
+  /* 🎨 Primary Colors */
+  --clr-gold-500: hsl(31, 77%, 52%);
+  --clr-cyan-800: hsl(184, 100%, 22%);
+  --clr-green-950: hsl(179, 100%, 13%);
+
+  /* ⚪ Neutral Colors */
+  --clr-white-transparent: hsla(0, 0%, 100%, 0.75);
+  --clr-gray-100: hsl(0, 0%, 95%);
+
+  /* ✍️ Typography */
+  --font-size-body: 15px;
+
+  /* 🅰️ Fonts */
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+  --ff-big-shoulders: "Big Shoulders", sans-serif;
+
+  --margin:2rem;
+  --margin-link:clamp(0rem , 0rem + 5vw , 4rem)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--ff-lexend-deca);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+  justify-items: center;
+  width: 100%;
+  max-width: 56.25rem;
+}
+
+.box__card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  padding: 2rem;
+  max-width: 300px;
+  color: var(--clr-gray-100);
+}
+.box__card-img{
+    display: grid;
+    grid-template-rows: subgrid;
+}
+.box__card-titulo{
+    display: grid;
+    grid-template-rows: subgrid;
+    font-family: var(--ff-big-shoulders);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: var(--margin);
+}
+.box__card-descripcion{
+    display: grid;
+    grid-template-rows: subgrid;
+    font-weight: 400;
+    width: 80%;
+    margin-top: var(--margin);
+    color: var(--clr-white-transparent);
+}
+
+.box__card-link{
+    display: grid;
+    grid-template-rows: subgrid;
+    margin-top: 0rem;
+    margin-top: var(--margin-link);
+    padding: 1rem  2rem;
+    background-color: var(--clr-gray-100);
+    width: max-content;
+    border-radius: 2rem;
+    text-decoration: none;
+} 
+
+.card1{
+  background-color: var(--clr-gold-500);
+}
+.card1__link{
+  color: var(--clr-gold-500);
+}
+
+.card2{
+  background-color: var(--clr-cyan-800);
+}
+
+.card2__link{
+  color: var(--clr-cyan-800);
+}
+
+.card3{
+  background-color: var(--clr-green-950);
+}
+
+.card3__link{
+  color:var(--clr-green-950);
+}
